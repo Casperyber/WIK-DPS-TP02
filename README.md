@@ -14,3 +14,7 @@ Il est maintenant prêt et actif
 
 Pour pousser la vérification au max en allant directement sur le docker desktop et vérifier que votre projet est build 
 
+Maintenant nous allons passer au multi-stage pour faire celui-ci nous allons créer un autre dockerfile qui est dans se dépot puis nous allons faire les commande suivante
+            - docker build --no-cache -f Dockerfile.multi -t api-multi .
+            - docker run -d -p 3000:3000 --name multi api-multi
+            - docker rm -f multi 
