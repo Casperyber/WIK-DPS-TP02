@@ -18,3 +18,15 @@ Maintenant nous allons passer au multi-stage pour faire celui-ci nous allons cr�
             - docker build --no-cache -f Dockerfile.multi -t api-multi .
             - docker run -d -p 3000:3000 --name multi api-multi
             - docker rm -f multi 
+
+GET /ping
+Réponse : JSON contenant les headers HTTP de la requête, code 200
+Exemple de réponse :
+
+{
+  "host": "localhost:3000",
+  "user-agent": "curl/7.88.1",
+  "accept": "*/*"
+}
+
+Tout autre verbe HTTP et/ou route donne un code 404 avec une réponse vide.
